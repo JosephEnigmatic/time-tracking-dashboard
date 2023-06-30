@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Frontend Mentor | Time tracking dashboard</title>
+</head>
+<body>
+    <main>
+        <div class="time-tracking">
+            <!-- container -->
+            <div class="grid">
+                <!-- user -->
+                <div class="user card">
+                    <div class="user__details">
+                        <img src="images/image-jeremy.png" alt="image-jeremy">
+
+                        <div class="text">
+                            <p>Report for</p>
+                            <h1>Jeremy Robson</h1>
+                        </div>
+                    </div>
+
+                    <ul class="user__options">
+                        <li><button class="btn">Daily</button></li>
+                        <li><button class="btn">Weekly</button></li>
+                        <li><button class="btn">Monthly</button></li>
+                    </ul>
+                </div>
+
+                <!-- others -->
+                <div class="grid-card card">
+                    <div class="bg work">
+                        <img src="images/icon-work.svg" alt="icon-work">
+                    </div>
+                    <div class="details">
+                        <div class="flex head">
+                            <h3>Work</h3>
+                            <button><img src="images/icon-ellipsis.svg" alt="icon-ellipsis"></button>
+                        </div>
+                        <div class="flex body">
+                            <h2 class="work-current">32hrs</h2>
+                            <p>Last week - <span class="work-previous">36hrs</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-card card">
+                    <div class="bg play">
+                        <img src="images/icon-play.svg" alt="icon-play">
+                    </div>
+                    <div class="details">
+                        <div class="flex head">
+                            <h3>Play</h3>
+                            <button><img src="images/icon-ellipsis.svg" alt="icon-ellipsis"></button>
+                        </div>
+                        <div class="flex body">
+                            <h2 class="play-current">10hrs</h2>
+                            <p>Last week - <span class="play-previous">8hrs</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-card card">
+                    <div class="bg study">
+                        <img src="images/icon-study.svg" alt="icon-study">
+                    </div>
+                    <div class="details">
+                        <div class="flex head">
+                            <h3>Study</h3>
+                            <button><img src="images/icon-ellipsis.svg" alt="icon-ellipsis"></button>
+                        </div>
+                        <div class="flex body">
+                            <h2 class="study-current">4hrs</h2>
+                            <p>Last week - <span class="study-previous">7hrs</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-card card">
+                    <div class="bg exercise">
+                        <img src="images/icon-exercise.svg" alt="icon-exercise">
+                    </div>
+                    <div class="details">
+                        <div class="flex head">
+                            <h3>Exercise</h3>
+                            <button><img src="images/icon-ellipsis.svg" alt="icon-ellipsis"></button>
+                        </div>
+                        <div class="flex body">
+                            <h2 class="exercise-current">4hrs</h2>
+                            <p>Last week - <span class="exercise-previous">5hrs</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-card card">
+                    <div class="bg social">
+                        <img src="images/icon-social.svg" alt="icon-social">
+                    </div>
+                    <div class="details">
+                        <div class="flex head">
+                            <h3>Social</h3>
+                            <button><img src="images/icon-ellipsis.svg" alt="icon-ellipsis"></button>
+                        </div>
+                        <div class="flex body">
+                            <h2 class="social-current">5hrs</h2>
+                            <p>Last week - <span class="social-previous">10hrs</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-card card">
+                    <div class="bg self-care">
+                        <img src="images/icon-self-care.svg" alt="icon-self-care">
+                    </div>
+                    <div class="details">
+                        <div class="flex head">
+                            <h3>Self Care</h3>
+                            <button><img src="images/icon-ellipsis.svg" alt="icon-ellipsis"></button>
+                        </div>
+                        <div class="flex body">
+                            <h2 class="selfcare-current">2hrs</h2>
+                            <p>Last week - <span class="selfcare-previous">2hrs</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+:root {
+    --blue: hsl(246, 80%, 60%);
+    /* work */
+    --light-red: hsl(15, 100%, 70%);
+    /* play */
+    --soft-blue: hsl(195, 74%, 62%);
+    /* study */
+    --bright-red: hsl(348, 100%, 68%);
+    /* exercise */
+    --lime-green: hsl(145, 58%, 55%);
+    /* social */
+    --violet: hsl(264, 64%, 52%);
+    /* self care */
+    --soft-orange: hsl(43, 84%, 65%);
+
+    --very-dark-blue: hsl(226, 43%, 10%);
+    --dark-blue: hsl(235, 46%, 20%);
+    --card-hover: hsl(235, 46%, 40%);
+    --desaturated-blue: hsl(235, 45%, 61%);
+    --pale-blue: hsl(236, 100%, 87%);
+
+    --ff: 'Rubik', sans-serif;
+
+    --fs-small: 1.125rem;
+    --fs-large: 2.25rem;
+
+    --fw-light: 300;
+    --fw-normal: 400;
+    --fw-bold: 500;
+
+    --brd-radius: 1rem;
+}
+
+html {
+    font-size: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+h1, h2, h3 {
+    line-height: 1.1;
+    font-weight: var(--fw-normal);
+}
+
+body {
+    background-color: var(--very-dark-blue);
+    line-height: 1.5;
+    font-family: var(--ff);
+    font-size: 1rem;
+    font-weight: var(--fw-light);
+    color: var(--pale-blue);
+}
+
+/* utility classes */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: auto;
+    gap: 1.5rem;
+    padding: 0 1rem;
+    margin: 2rem auto;
+    max-width: 1112px;
+}
+
+.card {
+    overflow: hidden;
+    border-radius: var(--brd-radius);
+    display: grid;
+}
+
+.btn {
+    color: var(--pale-blue);
+    font-size: 1.1rem;
+    transition: all 300ms ease-in-out;
+}
+
+.btn:is(:hover, :focus) {
+    color: white;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* user style */
+.user {
+    background-color: var(--dark-blue);
+}
+
+.user__details {
+    background-color: var(--blue);
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    border-radius: var(--brd-radius);
+}
+
+.user__details img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-right: 1rem;
+}
+
+.user__details h1 {
+    color: white;
+    font-weight: var(--fw-light);
+}
+
+.user__options {
+    padding: 1.75rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* other card */
+.grid-card {
+    display: grid;
+}
+
+.grid-card:hover .details {
+    background-color: var(--card-hover);
+    cursor: pointer;
+}
+
+.grid-card .bg {
+    background-color: white;
+    grid-column:  1 / -1;
+    grid-row: 1 / 3;
+    padding: 0 2rem;
+}
+
+.bg.work {
+    background-color: var(--light-red);
+}
+
+.bg.play {
+    background-color: var(--soft-blue);
+}
+
+.bg.study {
+    background-color: var(--bright-red);
+}
+
+.bg.exercise {
+    background-color: var(--lime-green);
+}
+
+.bg.social {
+    background-color: var(--violet);
+}
+
+.bg.self-care {
+    background-color: var(--soft-orange);
+}
+
+.grid-card .bg img {
+    margin-left: auto;
+    height: 80px;
+}
+
+.grid-card .details {
+    background-color: var(--dark-blue);
+    grid-column: 1 / -1;
+    grid-row: 2 / 10;
+    border-radius: var(--brd-radius);
+    padding: 2rem;
+    transition: all 300ms ease-in;
+}
+
+.details .head {
+    margin-bottom: 1rem;
+}
+
+.details .head h3 {
+    color: white;
+    font-size: var(--fs-small);
+}
+
+.details .body h2 {
+    font-size: var(--fs-large);
+    color: white;
+}
+
+.details .body p {
+    font-size: var(--fs-small);
+}
+
+@media screen and (min-width: 520px) {
+    .body {
+        display: block;
+    }
+
+    .details .body h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+
+    .grid {
+        margin: auto;
+    }
+
+    .user {
+        grid-row: 1 / 3;
+    }
+
+    .user__options, .user__details {
+        flex-direction: column;
+        align-items: start;
+        gap: 0.75rem;
+    }
+
+    .user__details h1 {
+        font-size: 2.75rem;
+    }
+}
